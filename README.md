@@ -22,30 +22,34 @@
 ```
 
 # DB
-- Data struture.
-  - Under Campaign there are Ad sets, and under ad sets there are creatvies.
 
-Please continue using the included SQLite database (db.sqlite3) for development.
+- Use the provided SQLite database (db.sqlite3) for development.
+- Campaigns contain Ad sets; Ad sets contain Creatives.
 
-## Requirements
+# Questions ( 2 mandatory + 1 optional )
 
-1. Add nested data into API.
+## Mandatory Questions:
 
-- /api/data/campaigns/
-  this API should return campaign list with all nested Adsets & Creatives
-- /api/data/adsets/
-  this API should return adset list with all nested Creatives
+> 1. Nested Data API Implementation:
+>
+> - Update /api/data/campaigns/ which should return a list of campaigns with all nested Adsets & Creatives.
 
-2. The other will be about prevent spaming API (Rate limit)
+> - Update /api/data/adsets/ to return a list of adsets with all nested Creatives.
 
-- We will ask them to limit the number of api calls per minute to this endpoint based on IP address. For example, my current IP address is 123.123.123.123, I’m only allowed to call to GET /products at most 10 times/minute. If I perform more, server will return the 429 status code with some suitable message warning about spamming api.
+> 2. Prevent spaming API (Rate limit)
+>
+> - Implement rate limiting based on IP address for the above endpoints.
+> - Limit each IP to a maximum of 10 requests per minute to the endpoints.
+> - Exceeding the limit should return a 429 status code with an appropriate warning message.
 
-3. (Optional) Want to change base authentication field, username into user_id on base user model.
+## Optional Question:
 
-4. (Optional) Find out some bad codes on data application and refactor those.
+> 1.  (Optional) Base Authentication Change:
+>
+> - Change the base authentication field from username to user_id on the base user model.
 
 ## Note
 
-There could be multiple expected ways for answers. 
-Show me your idea for refactoring this project.
-Please find out some way to optimize performance.
+- Multiple solutions may be valid.
+- Share your refactoring ideas.
+- Suggest performance optimization methods.
