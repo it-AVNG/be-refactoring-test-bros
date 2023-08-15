@@ -4,8 +4,6 @@
 
 - Investigate given code.
 - Develop API Endpoint of Campaign / Ad sets / Creatives data
-- Data struture.
-  - Under Campaign there are Ad sets, and under ad sets there are creatvies.
 
 ## Project Structure
 
@@ -24,6 +22,8 @@
 ```
 
 # DB
+- Data struture.
+  - Under Campaign there are Ad sets, and under ad sets there are creatvies.
 
 Please continue using the included SQLite database (db.sqlite3) for development.
 
@@ -46,5 +46,6 @@ Please continue using the included SQLite database (db.sqlite3) for development.
 
 ## Note
 
-There could be multiple expected ways for answers. Show me your idea for refactoring this project.
+There could be multiple expected ways for answers. 
+Show me your idea for refactoring this project.
 Please find out some way to optimize performance.
