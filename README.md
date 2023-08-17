@@ -33,7 +33,6 @@
 > 1. Nested Data API Implementation:
 >
 > - Update /api/data/campaigns/ which should return a list of campaigns with all nested Adsets & Creatives.
-
 > - Update /api/data/adsets/ to return a list of adsets with all nested Creatives.
 
 > 2. Prevent spaming API (Rate limit)
