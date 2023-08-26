@@ -42,3 +42,5 @@ class AccountViewSet(viewsets.ReadOnlyModelViewSet):
 
     def get_queryset(self):
         return Account.objects.all()
+
+
