@@ -151,7 +151,10 @@ REST_FRAMEWORK = {
         'user': '10/min'#limit registerunser connection
     },
     'NUM_PROXIES': 0, #including checking HTTP_X_FORWARD_TO header
-    'EXCEPTION_HANDLER': 'data.utils.exceptions_handler.custom_exceptions_handler'
+    'EXCEPTION_HANDLER': 'data.utils.exceptions_handler.custom_exceptions_handler',
+    #pagination for performance 
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 2,
 }
 
 REST_AUTH = {
