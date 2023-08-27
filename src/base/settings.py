@@ -135,7 +135,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # REST Framework
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.SessionAuthentication', # to keep track of signed in user while in browseable API
         'rest_framework.authentication.TokenAuthentication',  
     ],
     'DEFAULT_PERMISSION_CLASSES': [
@@ -145,13 +145,12 @@ REST_FRAMEWORK = {
         'django_filters.rest_framework.DjangoFilterBackend',
     ),
     'DEFAULT_THROTTLE_CLASSES': [
-        'rest_framework.throttling.AnonRateThrottle',
         'rest_framework.throttling.UserRateThrottle'
     ],
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '10/minute',
-        'user': '10/minute'
-    }    
+        'user': '10/min'#limit registerunser connection
+    },
+    'NUM_PROXIES': 0, #including checking HTTP_X_FORWARD_TO header
 }
 
 REST_AUTH = {
