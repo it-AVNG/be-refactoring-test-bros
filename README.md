@@ -57,4 +57,4 @@
   - set `NUM_PROXIES` to not `None` for enable checking xff
   - create a utils folder to store custom exception handler and create custome message for HTTP_429
   - add path to new exception hanler to DRF `EXCEPTION_HANDLER`
-- Suggest performance optimization methods.
+- Suggest performance optimization methods: add global pagination for exception handling
