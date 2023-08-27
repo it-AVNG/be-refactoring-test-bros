@@ -51,4 +51,10 @@
 
 - Multiple solutions may be valid.
 - Share your refactoring ideas.
+  - nesting api data by modify `serializers.py`: referencing related_names in each models
+  - prevent spaming by add `DEFAULT_THROTTLE_CLASSES` and `DEFAULT_THROTTLE_RATES` to `settings.py`
+  - target of throtle for only user because each views only allowed authenticated user to access
+  - set `NUM_PROXIES` to not `None` for enable checking xff
+  - create a utils folder to store custom exception handler and create custome message for HTTP_429
+  - add path to new exception hanler to DRF `EXCEPTION_HANDLER`
 - Suggest performance optimization methods.
