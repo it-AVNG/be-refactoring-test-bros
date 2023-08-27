@@ -151,6 +151,7 @@ REST_FRAMEWORK = {
         'user': '10/min'#limit registerunser connection
     },
     'NUM_PROXIES': 0, #including checking HTTP_X_FORWARD_TO header
+    'EXCEPTION_HANDLER': 'data.utils.exceptions_handler.custom_exceptions_handler'
 }
 
 REST_AUTH = {
